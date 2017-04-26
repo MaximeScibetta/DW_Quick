@@ -67,24 +67,31 @@ export default class CommentForm extends Component {
         }
 
         return (
-            <form onSubmit={ this.handleSubmit.bind( this ) }>
+            <form onSubmit={ this.handleSubmit.bind( this ) } className="form">
                 { $error }
-                <div>
+                <div className="form__name">
                     <label htmlFor="comment-form-name">{ "Nom" }</label>
                     <input type="text" id="comment-form-name" onChange={ this.handleNameChange.bind( this ) } placeholder={ "Nom/Pseudo" } value={ this.state.name } />
                 </div>
-                <div>
+                <div className="form__eval">
                     <label htmlFor="comment-form-rating">{ "Évaluation" }</label>
-                    <select id="comment-form-rating" value={ this.state.rating } onChange={ this.handleRatingChange.bind( this ) }>
+                    {/*<select id="comment-form-rating" value={ this.state.rating } onChange={ this.handleRatingChange.bind( this ) }>
                         <option value={ 0 }>{ "Bof" }</option>
                         <option value={ 1 }>{ "Mouais" }</option>
                         <option value={ 2 }>{ "Peut mieux faire" }</option>
                         <option value={ 3 }>{ "Passable" }</option>
                         <option value={ 4 }>{ "Super" }</option>
                         <option value={ 5 }>{ "Formidable" }</option>
-                    </select>
+                    </select>*/}
+                    <div id="comment-form-rating" value={ this.state.rating } onChange={ this.handleRatingChange.bind( this ) } className="star__eval">
+                        <span value={ 1 } className="star star__hover"></span>
+                        <span value={ 2 } className="star star__hover"></span>
+                        <span value={ 3 } className="star star__hover"></span>
+                        <span value={ 4 } className="star star__hover"></span>
+                        <span value={ 5 } className="star star__hover"></span>
+                    </div>
                 </div>
-                <div>
+                <div className="form__comment">
                     <label htmlFor="comment-form-content">{ "Commentaire" }</label>
                     <textarea id="comment-form-content" value={ this.state.content } onChange={ this.handleContentChange.bind( this ) } />
                 </div>

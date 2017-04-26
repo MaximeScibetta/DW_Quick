@@ -1,0 +1,100 @@
+.comment{
+    width: 80%;
+    margin: 0 auto;
+    .list{
+        margin: 2em 0;
+        background-color: hsla(0, 84%, 62%, 0.9);
+        padding: 1em;
+        color: $white;
+    }
+    .form__name input:focus,
+    .form__eval .star__hover:before:focus .star__eval,
+    .form__comment textarea:focus{
+        border-bottom: 2px solid $red;
+    }
+    .form{
+        &__name{
+            label{
+                display: block;
+                margin-bottom: 0.5em;
+                text-transform: uppercase;
+            }
+            input{
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid hsla(206, 29%, 28%, 0.3);
+            }
+        }
+        &__eval{
+            margin-top: 1.5em;
+            label{
+                display: block;
+                margin-bottom: 0.5em;
+                text-transform: uppercase;
+            }
+            // select{
+            //     width: 100%;
+            //     border: none;
+            //     border-bottom: 2px solid hsla(206, 29%, 28%, 0.3);
+            //     option{
+            //         display: inline-block;
+            //     }
+            // }
+            .star__eval{
+                border-bottom: 2px solid hsla(206, 29%, 28%, 0.3);
+                .star{
+                    &:before{
+                        display: inline-block;
+                        content: "";
+                        width: 50px;
+                        height: 50px;
+                        background-image: url("../images/star_e.png");
+                        background-size: 75%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .star__hover:hover{
+                        display: inline-block;
+                        content: "";
+                        width: 50px;
+                        height: 50px;
+                        background-image: url("../images/star.png");
+                        background-size: 75%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                }
+                .star__hover:hover .star:before{
+                    display: none;
+                }
+            }
+        }
+        &__comment{
+            margin-top: 1.5em;
+            label{
+                display: block !important;
+                margin-bottom: 0.5em;
+                text-transform: uppercase;
+            }
+            textarea{
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid hsla(206, 29%, 28%, 0.3);
+            }
+        }
+        button{
+            width: 80%;
+            margin: 0 auto;
+            border: none;
+            background-color: $red;
+            color: $white;
+            font-family: $sspBlack;
+            text-transform: uppercase;
+            padding: 1em 1.5em;
+            border-radius: 25px;
+            display: block;
+            letter-spacing: 1px;
+            margin-top: 2em;
+        }
+    }
+}

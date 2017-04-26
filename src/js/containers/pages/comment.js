@@ -94,8 +94,10 @@ export default class CommentPageContainer extends Container {
             <div className={ "page" }>
                 <Header pageTitle={ sPageTitle } backLink={ `/details/${ this.props.match.params.slug }` } />
                 <main className={ "content" }>
-                    { $content }
-                    { $form }
+                    <div className="comment">
+                        { $content }
+                        { $form }
+                    </div>
                 </main>
             </div>
         );

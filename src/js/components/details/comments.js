@@ -39,6 +39,7 @@ export default class PlaceComments extends Component {
                         { $content }
                     </div>
                 </div>
+                <a href="javascript:void(0)" className="more"> </a>
                 <Link className="addComment" to={ `/details/${ this.props.slug }/comment` }>{ "Ajouter un commentaire" }</Link>
             </div>
         );
