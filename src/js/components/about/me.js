@@ -11,7 +11,11 @@ import React, { Component } from "react";
 export default class AboutMe extends Component {
     render() {
         return (
-            <div>{ "About me…" }</div>
+            <div>
+                <a href="https://github.com/MaximeScibetta/DW_Quick"> Github </a>
+                <a href="http://maxime-scibetta.be/"> Portfolio </a>
+                <a href="http://maxime-scibetta.be/"> API </a>
+            </div>
         );
     }
 }

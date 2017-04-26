@@ -12,8 +12,8 @@ import PropTypes from "prop-types";
 export default class PlaceInfo extends Component {
     render() {
         return (
-            <div>
-                <h3>{ this.props.name }</h3>
+            <div className="info__recap">
+                <h3 className="visuallyhidden">{ this.props.name }</h3>
                 <address>{ this.props.address }</address>
                 <p>
                     <span>{ "Distance : " }</span>

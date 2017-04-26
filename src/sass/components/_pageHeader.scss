@@ -1,0 +1,66 @@
+header{
+    background-color: $red;
+    color: $white;
+    height: 4em;
+    position: relative;
+    & *{
+        //display: inline-block;
+    }
+    h2{
+        text-transform: uppercase;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 1.5em;
+        font-family: $sspBlack;
+        letter-spacing: 1px;
+    }
+    &:after{
+        display: inline-block;
+        height: 100%;
+        width: 50px;
+        content:"";
+        background-image: url("../images/about.png");
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &:before{
+        display: inline-block;
+        height: 100%;
+        width: 50px;
+        content:"";
+        background-image: url("../images/arrow.png");
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    nav{
+        .aboutLink{
+            opacity: 0;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            height: 100%;
+            width: 50px;
+        }
+        .prevLink{
+            opacity: 0;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            height: 100%;
+            width: 50px;
+        }
+    }
+}

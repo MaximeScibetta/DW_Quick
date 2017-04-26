@@ -1,12 +1,29 @@
-/* hepl-dw/vitfoud-client
- *
- * /src/sass/styles.scss - Main styles for vitfoud
- *
- * coded by leny@flatLand!
- * started at 22/04/2017
- */
+/************/
+/***IMPORT***/
+/************/
+
+/****generic****/
+@import 'generic/reset';
+
+/****tools***/
+@import 'tools/baseline';
+
+/****settings***/
+@import 'settings/colors';
+@import 'settings/fontFace';
+@import 'settings/global';
+
+/****components****/
+@import 'components/pageHeader';
+@import 'components/pageList';
+@import 'components/pageInfo';
+@import 'components/pageAbout';
+
+/****trumps****/
+@import 'trumps/hideText';
 
 html {
     position: relative;
-    // …
+    font-family: $sspRegular;
+    @include rhythm($font-base, $font-base*1.5);
 }

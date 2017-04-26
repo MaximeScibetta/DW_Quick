@@ -15,8 +15,8 @@ import { Link } from "react-router-dom";
 export default class ListElement extends Component {
     render() {
         return (
-            <li>
-                <Link to={ `/details/${ this.props.slug }` }>
+            <li className="quickList">
+                <Link className="listLink" to={ `/details/${ this.props.slug }` }>
                     <Place { ...this.props } />
                 </Link>
             </li>

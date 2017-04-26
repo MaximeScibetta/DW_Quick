@@ -21,7 +21,7 @@ export default class PlaceComments extends Component {
             $content = ( <Loading /> );
         } else if ( this.props.comments.length ) {
             $content = (
-                <ul>
+                <ul className="comments">
                     { this.props.comments.map( ( oComment ) => (
                         <PlaceComment key={ `${ oComment.name }-${ oComment.date }` } { ...oComment } />
                     ) ) }
@@ -32,10 +32,14 @@ export default class PlaceComments extends Component {
         }
 
         return (
-            <div>
-                <h4>{ "Commentaires" }</h4>
-                <Link to={ `/details/${ this.props.slug }/comment` }>{ "Ajouter un commentaire" }</Link>
-                { $content }
+            <div className="container">
+                <div className="window">
+                    <div className="info__comments">
+                        <h4 className="visuallyhidden">{ "Commentaires" }</h4>
+                        { $content }
+                    </div>
+                </div>
+                <Link className="addComment" to={ `/details/${ this.props.slug }/comment` }>{ "Ajouter un commentaire" }</Link>
             </div>
         );
     }

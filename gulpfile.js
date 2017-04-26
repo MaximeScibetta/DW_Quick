@@ -17,8 +17,7 @@ var gulp = require( "gulp" ),
     uglify = require( "gulp-uglify" ),
     buffer = require( "vinyl-buffer" ),
     babelify = require( "babelify" ),
-    watchify = require( "watchify" ),
-    browserSync = require('browser-sync').create();
+    watchify = require( "watchify" );
 
 var aLibs = Object.keys( require( "./package.json" ).dependencies );
 
@@ -37,18 +36,8 @@ gulp.task( "css", function() {
         .pipe( sass().on( "error", sass.logError ) )
         .pipe( autoprefixer() )
         .pipe( csso() )
-        .pipe( gulp.dest( "assets/css" ) )
-        .pipe(browserSync.stream());
+        .pipe( gulp.dest( "assets/css" ) );
 } );
-
-// --- Task for browser-sync
-gulp.task('serve', ['css'], function() {
-
-    browserSync.init({
-        server: "./assets"
-    });
-    
-});
 
 // --- Tasks for js
 
@@ -108,5 +97,5 @@ gulp.task( "watch", [ "js-watch" ], function() {
 
 // --- Aliases
 
-gulp.task( "default", [ "html", "css", "js", "serve" ] );
+gulp.task( "default", [ "html", "css", "js" ] );
 gulp.task( "work", [ "default", "watch" ] );

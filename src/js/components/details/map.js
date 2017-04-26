@@ -11,8 +11,12 @@ import PropTypes from "prop-types";
 
 export default class PlaceMap extends Component {
     render() {
+        let sURL = `https://maps.googleapis.com/maps/api/staticmap?center=${ this.props.position.latitude },${ this.props.position.longitude }&zoom=14&size=250x150&maptype=roadmap&markers=color:red|label:Q|${ this.props.position.latitude },${ this.props.position.longitude }&key=AIzaSyDLQApuIxpySrcLirqnDSUqOgZlhRFghaQ`;
+
         return (
-            <div>{ "Here will be a static map." }</div>
+            <div className="info__map">
+                <img src={ sURL } />
+            </div>
         );
     }
 }

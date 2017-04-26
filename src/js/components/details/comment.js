@@ -16,14 +16,18 @@ export default class PlaceComment extends Component {
             sReadableDate = `${ dDate.toLocaleDateString() } à ${ dDate.toLocaleTimeString() }`;
 
         return (
-            <li>
+            <li className="comments__item">
                 <strong>{ this.props.name }</strong>
                 <time dateTime={ sISODate }>{ sReadableDate }</time>
-                <div>
-                    <em>{ "Appréciation : " }</em>
-                    <span>{ `${ this.props.rating }/5` }</span>
+                <div className="rating">
+                    <em className="visuallyhidden">{ "Appréciation : " }</em>
+                    <span>
+                        <span>{ `${ this.props.rating }` }</span>
+                        <span>/</span>
+                        <span>5</span>
+                    </span>
                 </div>
-                <div>{ this.props.comment }</div>
+                <div className="content">{ this.props.comment }</div>
             </li>
         );
     }

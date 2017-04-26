@@ -16,16 +16,16 @@ const DAY_NAMES = [ "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi",
 export default class PlaceHours extends Component {
     renderOpenState() {
         if ( this.props.open ) {
-            return ( <p>{ "Cet endroit est actuellement ouvert" }</p> );
+            return ( <p>{ "ouvert" }</p> );
         }
 
-        return ( <p>{ "Cet endroit est actuellement fermé." }</p> );
+        return ( <p>{ "fermé" }</p> );
     }
 
     renderDay( [ iOpenHour, iCloseHour ], iDayIndex ) {
         return (
             <li key={ iDayIndex }>
-                <strong>{ `${ DAY_NAMES[ iDayIndex ] } : ` }</strong>
+                <strong>{ `${ DAY_NAMES[ iDayIndex ] } ` }</strong>
                 <span>{ `${ hoursAsString( iOpenHour ) } - ${ hoursAsString( iCloseHour ) }` }</span>
             </li>
         );
@@ -39,7 +39,7 @@ export default class PlaceHours extends Component {
         aHours.push( aHours.shift() ); // Fix "weeks stars sunday".
 
         return (
-            <div>
+            <div className="info__hours">
                 { this.renderOpenState() }
                 <ul>
                     { aHours.map( this.renderDay.bind( this ) ) }

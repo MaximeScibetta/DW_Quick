@@ -22,8 +22,12 @@ export default class AboutPageContainer extends Container {
             <div className={ "page" }>
                 <Header pageTitle={ "À propos…" } backLink="/" />
                 <main className={ "content" }>
-                    <AboutProject />
-                    <AboutMe />
+                    <div className="about">
+                        <h1>Coded by</h1>
+                        <h2>Maxime Scibetta</h2>
+                        <AboutProject />
+                        <AboutMe />
+                    </div>
                 </main>
             </div>
         );

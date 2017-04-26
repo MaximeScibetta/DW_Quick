@@ -1,0 +1,35 @@
+.about{
+    width: 80%;
+    margin: 0 auto;
+    h1{
+        margin-top: 0.5em;
+        font-size:66px;
+        font-family: $sspLight;
+    }
+    h2{
+        font-size:31px;
+        text-transform: uppercase;
+        font-family: $sspBlack;
+    }
+    div{
+        text-align: center;
+        font-family: $sspLight;
+        p{
+            margin-top: 2em;
+        }
+        p+p{
+            margin-top: 0.5em;
+        }
+    }
+    div+div{
+        margin-top: 2em;
+        a{    
+            color: $link-color;
+            text-decoration: none;
+            font-family: $sspBlack;
+        }
+        a+a, a+a+a{
+            margin-left: 10%;
+        }
+    }
+}

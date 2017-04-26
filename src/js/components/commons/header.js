@@ -23,12 +23,12 @@ export default class Header extends Component {
 
         if ( this.props.backLink ) {
             $prevLink = (
-                <Link to={ this.props.backLink }>{ "retour" }</Link>
+                <Link className="prevLink " to={ this.props.backLink }>{ "retour" }</Link>
             );
         }
 
         $aboutLink = (
-            <Link to="/about">{ "à propos" }</Link>
+            <Link className="aboutLink " to="/about">{ "à propos" }</Link>
         );
 
         return (
@@ -44,8 +44,8 @@ export default class Header extends Component {
 
         return (
             <header>
-                <h1>{ "Vitfoud" }</h1>
-                <h2>{ this.props.pageTitle }</h2>
+                <h1 className="visuallyhidden">{ "Vitfoud" }</h1>
+                <h2 className="">{ this.props.pageTitle }</h2>
                 { this.renderNav() }
             </header>
         );
