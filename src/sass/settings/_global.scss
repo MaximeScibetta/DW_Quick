@@ -1,7 +1,13 @@
 //Fonts-size
 
 $font-base: 16;
-
+@media (min-width:720px){
+    $font-base: 24;
+    $font-content: $font-base * 1.5;
+    $font-lvl1: $font-content * 1.5;
+    $font-lvl2: $font-lvl1 * 1.5;
+    $font-lvl3: $font-lvl2 * 1.5;
+}
 $font-micro: 10;
 $font-content: $font-base * 1.5;
 $font-lvl1: $font-content * 1.5;

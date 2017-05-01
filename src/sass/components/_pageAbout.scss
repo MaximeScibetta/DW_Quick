@@ -1,16 +1,23 @@
 .about{
     width: 80%;
     margin: 0 auto;
-    h1{
-        margin-top: 0.5em;
-        font-size:66px;
-        font-family: $sspLight;
-    }
-    h2{
-        font-size:31px;
-        text-transform: uppercase;
-        font-family: $sspBlack;
-    }
+        &__head{
+            max-width: 500px;
+            margin: 0 auto;
+            h1{
+            margin-top: 0.5em;
+            font-size:66px;
+            font-family: $sspLight;
+            text-align: center;
+            }
+            h2{
+                margin-top: 0.25em;
+                font-size:31px;
+                text-transform: uppercase;
+                font-family: $sspBlack;
+                text-align: center;
+            }
+        }
     div{
         text-align: center;
         font-family: $sspLight;
@@ -22,7 +29,8 @@
         }
     }
     div+div{
-        margin-top: 2em;
+        margin: 2em auto 0;
+        max-width: 500px;
         a{    
             color: $link-color;
             text-decoration: none;

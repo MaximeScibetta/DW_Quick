@@ -6,6 +6,35 @@
         background-color: hsla(0, 84%, 62%, 0.9);
         padding: 1em;
         color: $white;
+        position: relative;
+        &:before{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            content:"";
+            background-image: url("../images/adress.png");
+            background-size: 75%;
+            background-repeat: no-repeat;
+            //background-position: center;
+            position: absolute;
+            top: 15px;
+            left: 2%;        
+        }
+        strong, address, em, span{
+            margin-left: 15%;
+            display: block;
+        }
+        address, em, span{
+            margin-top: 0.2em;
+        }
+        span{
+            display: inline-block;
+            background-color: $white;
+            color: $red;
+            text-transform: uppercase;
+            font-family: $sspBlack;
+            padding: 0.3em 2%;
+        }
     }
     .form__name input:focus,
     .form__eval .star__hover:before:focus .star__eval,
@@ -95,6 +124,10 @@
             display: block;
             letter-spacing: 1px;
             margin-top: 2em;
+            box-shadow: rgba(0, 0, 0, 0.5) -2px 4px 10px 2px;
+            &:active{
+                box-shadow: rgba(0, 0, 0, 0.5) -2px 4px 10px -2px;
+            }
         }
     }
 }
